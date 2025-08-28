@@ -45,7 +45,7 @@ export function Header() {
 
           {/* ABSOLUTE-CENTERED NAV */}
           <nav className="absolute left-1/2 -translate-x-1/2">
-            <ul className="flex items-center gap-6 text-sm md:text-base">
+<div className="hidden md:flex items-center space-x-6">
               <li>
                 <Link 
                   href="/#browse" 
@@ -61,7 +61,7 @@ export function Header() {
                 >
                   {t('howItWorks')}
                 </Link>
-              </li>
+              </div>
             </ul>
           </nav>
 
