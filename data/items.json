@@ -1,0 +1,114 @@
+[
+  {
+    "id": "beach-umbrella-1",
+    "name": "Parosols",
+    "category": "BEACH",
+    "pricePerDay": 800,
+    "imageUrl": "/products/parosols.jpg"
+  },
+  {
+    "id": "beach-chairs-2",
+    "name": "Beach Chairs",
+    "category": "BEACH",
+    "pricePerDay": 1200,
+    "imageUrl": "/products/beach chairs.jpg"
+  },
+  {
+    "id": "beach-tent-1",
+    "name": "Beach Tent",
+    "category": "BEACH",
+    "pricePerDay": 1500,
+    "imageUrl": "/products/beach tent.jpg"
+  },
+  {
+    "id": "cooler-large",
+    "name": "Beach Set",
+    "category": "BEACH",
+    "pricePerDay": 1000,
+    "imageUrl": "/products/beach set.jpg"
+  },
+  {
+    "id": "surfboard-beginner",
+    "name": "Surf Boards",
+    "category": "SPORTS",
+    "pricePerDay": 2500,
+    "imageUrl": "/products/surf boards.jpg"
+  },
+  {
+    "id": "kayak-single",
+    "name": "Inflatable Kayak",
+    "category": "SPORTS",
+    "pricePerDay": 3000,
+    "imageUrl": "/products/inflatable kayak 2.jpg"
+  },
+  {
+    "id": "snorkel-set",
+    "name": "Snorkelling Set",
+    "category": "SPORTS",
+    "pricePerDay": 1500,
+    "imageUrl": "/products/snorkel set.jpg"
+  },
+  {
+    "id": "bike-mountain",
+    "name": "Mountain Bike",
+    "category": "SPORTS",
+    "pricePerDay": 3500,
+    "imageUrl": "/products/bicycle.jpg"
+  },
+  {
+    "id": "baby-stroller",
+    "name": "Kids Bike",
+    "category": "BABY",
+    "pricePerDay": 2000,
+    "imageUrl": "/products/kids bike.jpg"
+  },
+  {
+    "id": "baby-carrier",
+    "name": "Hiking Sticks",
+    "category": "BABY",
+    "pricePerDay": 1800,
+    "imageUrl": "/products/hiking sticks.jpg"
+  },
+  {
+    "id": "baby-tent",
+    "name": "Sun Loungers",
+    "category": "BABY",
+    "pricePerDay": 1200,
+    "imageUrl": "/products/sun loungers.jpg"
+  },
+  {
+    "id": "high-chair-portable",
+    "name": "Golf Clubs",
+    "category": "BABY",
+    "pricePerDay": 1000,
+    "imageUrl": "/products/golf clubs.jpg"
+  },
+  {
+    "id": "wheelchair-standard",
+    "name": "Fishing Rods",
+    "category": "MOBILITY",
+    "pricePerDay": 2500,
+    "imageUrl": "/products/fishing rods.jpg"
+  },
+  {
+    "id": "mobility-scooter",
+    "name": "Mobility Scooter",
+    "category": "MOBILITY",
+    "pricePerDay": 4500,
+    "imageUrl": "/products/scooter.jpg"
+  },
+  {
+    "id": "walking-frame",
+    "name": "Boat",
+    "category": "MOBILITY",
+    "pricePerDay": 1500,
+    "imageUrl": "/products/boat.jpg"
+  },
+  {
+    "id": "beach-wheelchair",
+    "name": "Inflatable Kayak",
+    "category": "MOBILITY",
+    "pricePerDay": 3500,
+    "imageUrl": "/products/inflatable kayak.jpg"
+  }
+]
