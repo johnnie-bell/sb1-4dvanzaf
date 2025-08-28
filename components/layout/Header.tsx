@@ -43,27 +43,27 @@ export function Header() {
             Hire4Holidays
           </Link>
 
-          {/* ABSOLUTE-CENTERED NAV */}
-          <nav className="absolute left-1/2 -translate-x-1/2">
-<div className="hidden md:flex items-center space-x-6">
-              <li>
-                <Link 
-                  href="/#browse" 
-                  className="px-3 py-2 rounded-lg border border-gray-200 text-gray-700 hover:bg-blue-50 hover:text-blue-700 hover:border-blue-300 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                >
-                  {t('browse')}
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="/how-it-works" 
-                  className="px-3 py-2 rounded-lg border border-gray-200 text-gray-700 hover:bg-blue-50 hover:text-blue-700 hover:border-blue-300 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                >
-                  {t('howItWorks')}
-                </Link>
-              </div>
-            </ul>
-          </nav>
+          {/* ABSOLUTE-CENTERED NAV (desktop only) */}
+<nav className="absolute left-1/2 -translate-x-1/2 hidden md:block">
+  <ul className="flex items-center gap-6 text-sm md:text-base">
+    <li>
+      <Link 
+        href="/#browse" 
+        className="px-3 py-2 rounded-lg border border-gray-200 text-gray-700 hover:bg-blue-50 hover:text-blue-700 hover:border-blue-300 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+      >
+        {t('browse')}
+      </Link>
+    </li>
+    <li>
+      <Link 
+        href="/how-it-works" 
+        className="px-3 py-2 rounded-lg border border-gray-200 text-gray-700 hover:bg-blue-50 hover:text-blue-700 hover:border-blue-300 transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+      >
+        {t('howItWorks')}
+      </Link>
+    </li>
+  </ul>
+</nav>
 
           {/* RIGHT: bigger icons */}
           <div className="flex items-center gap-3">
