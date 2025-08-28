@@ -115,6 +115,8 @@ export function Header() {
                   <SheetTitle>{t('menu')}</SheetTitle>
                 </SheetHeader>
                 <div className="mt-6 space-y-4">
+                  {/* Only show Browse + How it Works in mobile menu */}
+  <div className="md:hidden space-y-4">
                   <Link 
                     href="/#browse" 
                     className="flex items-center space-x-3 text-sm font-medium text-gray-700 hover:text-primary transition-colors"
@@ -127,27 +129,29 @@ export function Header() {
                   >
                     <span>{t('howItWorks')}</span>
                   </Link>
-                  <div className="pb-4 border-b">
-                    <div className="flex items-center space-x-2 mb-2">
-                      <Globe className="h-4 w-4 text-gray-500" />
-                      <span className="text-sm font-medium text-gray-700">Language</span>
-                    </div>
-                    <div className="grid grid-cols-2 gap-2">
-                      {languageOptions.map((lang) => (
-                        <button
-                          key={lang.code}
-                          onClick={() => setLanguage(lang.code as any)}
-                          className={`px-3 py-2 text-sm rounded-lg border transition-colors ${
-                            language === lang.code
-                              ? 'bg-primary text-white border-primary'
-                              : 'bg-white text-gray-700 border-gray-200 hover:bg-gray-50'
-                          }`}
-                        >
-                          {lang.label}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
+                    
+  {/* Language selector */}
+  <div className="pb-4 border-b">
+    <div className="flex items-center space-x-2 mb-2">
+      <Globe className="h-4 w-4 text-gray-500" />
+      <span className="text-sm font-medium text-gray-700">Language</span>
+    </div>
+    <div className="grid grid-cols-2 gap-2">
+      {languageOptions.map((lang) => (
+        <button
+          key={lang.code}
+          onClick={() => setLanguage(lang.code as any)}
+          className={`px-3 py-2 text-sm rounded-lg border transition-colors ${
+            language === lang.code
+              ? 'bg-primary text-white border-primary'
+              : 'bg-white text-gray-700 border-gray-200 hover:bg-gray-50'
+          }`}
+        >
+          {lang.label}
+        </button>
+      ))}
+    </div>
+  </div>
                   <Link 
                     href="/inbox" 
                     className="flex items-center space-x-3 text-sm font-medium text-gray-700 hover:text-primary transition-colors"
