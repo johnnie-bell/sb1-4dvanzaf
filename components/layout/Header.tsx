@@ -105,81 +105,77 @@ export function Header() {
             />
 
             <Sheet>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="sm" className="h-10 w-10 rounded-full">
-                  <Menu className="h-6 w-6" />
-                </Button>
-              </SheetTrigger>
-              <SheetContent>
-                <SheetHeader>
-                  <SheetTitle>{t('menu')}</SheetTitle>
-                </SheetHeader>
-                <div className="mt-6 space-y-4">
-                  {/* Only show Browse + How it Works in mobile menu */}
-  <div className="md:hidden space-y-4">
-                  <Link 
-                    href="/#browse" 
-                    className="flex items-center space-x-3 text-sm font-medium text-gray-700 hover:text-primary transition-colors"
-                  >
-                    <span>{t('browse')}</span>
-                  </Link>
-                  <Link 
-                    href="/how-it-works" 
-                    className="flex items-center space-x-3 text-sm font-medium text-gray-700 hover:text-primary transition-colors"
-                  >
-                    <span>{t('howItWorks')}</span>
-                  </Link>
-                    
-  {/* Language selector */}
-  <div className="pb-4 border-b">
-    <div className="flex items-center space-x-2 mb-2">
-      <Globe className="h-4 w-4 text-gray-500" />
-      <span className="text-sm font-medium text-gray-700">Language</span>
-    </div>
-    <div className="grid grid-cols-2 gap-2">
-      {languageOptions.map((lang) => (
-        <button
-          key={lang.code}
-          onClick={() => setLanguage(lang.code as any)}
-          className={`px-3 py-2 text-sm rounded-lg border transition-colors ${
-            language === lang.code
-              ? 'bg-primary text-white border-primary'
-              : 'bg-white text-gray-700 border-gray-200 hover:bg-gray-50'
-          }`}
+  <SheetTrigger asChild>
+    <Button variant="ghost" size="sm" className="h-10 w-10 rounded-full">
+      <Menu className="h-6 w-6" />
+    </Button>
+  </SheetTrigger>
+  <SheetContent>
+    <SheetHeader>
+      <SheetTitle>{t('menu')}</SheetTitle>
+    </SheetHeader>
+    <div className="mt-6 space-y-4">
+      
+      {/* Mobile-only: Browse + How it Works */}
+      <div className="md:hidden space-y-4">
+        <Link 
+          href="/#browse" 
+          className="flex items-center space-x-3 text-sm font-medium text-gray-700 hover:text-primary transition-colors"
         >
-          {lang.label}
-        </button>
-      ))}
+          <span>{t('browse')}</span>
+        </Link>
+        <Link 
+          href="/how-it-works" 
+          className="flex items-center space-x-3 text-sm font-medium text-gray-700 hover:text-primary transition-colors"
+        >
+          <span>{t('howItWorks')}</span>
+        </Link>
+      </div>
+
+      {/* Language selector (always visible) */}
+      <div className="pb-4 border-b">
+        <div className="flex items-center space-x-2 mb-2">
+          <Globe className="h-4 w-4 text-gray-500" />
+          <span className="text-sm font-medium text-gray-700">Language</span>
+        </div>
+        <div className="grid grid-cols-2 gap-2">
+          {languageOptions.map((lang) => (
+            <button
+              key={lang.code}
+              onClick={() => setLanguage(lang.code as any)}
+              className={`px-3 py-2 text-sm rounded-lg border transition-colors ${
+                language === lang.code
+                  ? 'bg-primary text-white border-primary'
+                  : 'bg-white text-gray-700 border-gray-200 hover:bg-gray-50'
+              }`}
+            >
+              {lang.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* User options (always visible) */}
+      <Link href="/inbox" className="flex items-center space-x-3 text-sm font-medium text-gray-700 hover:text-primary transition-colors">
+        <Inbox className="h-4 w-4" />
+        <span>{t('inbox')}</span>
+      </Link>
+      <Link href="/profile" className="flex items-center space-x-3 text-sm font-medium text-gray-700 hover:text-primary transition-colors">
+        <User className="h-4 w-4" />
+        <span>{t('myProfile')}</span>
+      </Link>
+      <Link href="/help" className="flex items-center space-x-3 text-sm font-medium text-gray-700 hover:text-primary transition-colors">
+        <HelpCircle className="h-4 w-4" />
+        <span>{t('help')}</span>
+      </Link>
+      <button className="flex items-center space-x-3 text-sm font-medium text-gray-700 hover:text-primary transition-colors">
+        <LogOut className="h-4 w-4" />
+        <span>{t('signOut')}</span>
+      </button>
     </div>
-  </div>
-                  <Link 
-                    href="/inbox" 
-                    className="flex items-center space-x-3 text-sm font-medium text-gray-700 hover:text-primary transition-colors"
-                  >
-                    <Inbox className="h-4 w-4" />
-                    <span>{t('inbox')}</span>
-                  </Link>
-                  <Link 
-                    href="/profile" 
-                    className="flex items-center space-x-3 text-sm font-medium text-gray-700 hover:text-primary transition-colors"
-                  >
-                    <User className="h-4 w-4" />
-                    <span>{t('myProfile')}</span>
-                  </Link>
-                  <Link 
-                    href="/help" 
-                    className="flex items-center space-x-3 text-sm font-medium text-gray-700 hover:text-primary transition-colors"
-                  >
-                    <HelpCircle className="h-4 w-4" />
-                    <span>{t('help')}</span>
-                  </Link>
-                  <button className="flex items-center space-x-3 text-sm font-medium text-gray-700 hover:text-primary transition-colors">
-                    <LogOut className="h-4 w-4" />
-                    <span>{t('signOut')}</span>
-                  </button>
-                </div>
-              </SheetContent>
-            </Sheet>
+  </SheetContent>
+</Sheet>
+
           </div>
       </div>
     </div>
